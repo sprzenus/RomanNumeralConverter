@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,64 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RomanNumeralConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lWn-Kb-z9a">
+                                <rect key="frame" x="10" y="99" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" textContentType="one-time-code"/>
+                                <connections>
+                                    <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="fM8-jH-DGI"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is equal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCO-tp-B2K">
+                                <rect key="frame" x="155.5" y="145" width="64" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DSc-3x-59d">
+                                <rect key="frame" x="116" y="55" width="143" height="29"/>
+                                <segments>
+                                    <segment title="To roman"/>
+                                    <segment title="To arabic"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="tnl-43-cgL"/>
+                                </connections>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lo-2D-xed">
+                                <rect key="frame" x="10" y="174" width="355" height="302"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DSc-3x-59d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="72j-nh-DiS"/>
+                            <constraint firstItem="8Lo-2D-xed" firstAttribute="top" secondItem="nCO-tp-B2K" secondAttribute="bottom" constant="8" id="BVg-Dx-rr4"/>
+                            <constraint firstItem="lWn-Kb-z9a" firstAttribute="top" secondItem="DSc-3x-59d" secondAttribute="bottom" constant="16" id="Mw2-fs-axb"/>
+                            <constraint firstItem="8Lo-2D-xed" firstAttribute="width" secondItem="lWn-Kb-z9a" secondAttribute="width" id="U8f-eQ-oU7"/>
+                            <constraint firstItem="nCO-tp-B2K" firstAttribute="top" secondItem="lWn-Kb-z9a" secondAttribute="bottom" constant="16" id="YuA-Sl-hLj"/>
+                            <constraint firstItem="lWn-Kb-z9a" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-20" id="az9-28-laV"/>
+                            <constraint firstItem="nCO-tp-B2K" firstAttribute="centerX" secondItem="lWn-Kb-z9a" secondAttribute="centerX" id="miE-Pg-R4J"/>
+                            <constraint firstItem="8Lo-2D-xed" firstAttribute="centerX" secondItem="lWn-Kb-z9a" secondAttribute="centerX" id="nVD-nf-Qgl"/>
+                            <constraint firstItem="lWn-Kb-z9a" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oTx-bX-LCk"/>
+                            <constraint firstItem="DSc-3x-59d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xPW-aq-QPV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="resultTextView" destination="8Lo-2D-xed" id="zkz-Nz-Ax4"/>
+                        <outlet property="segmentedControl" destination="DSc-3x-59d" id="TvD-n8-dhP"/>
+                        <outlet property="textField" destination="lWn-Kb-z9a" id="l02-1c-efd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,7 +12,8 @@
 		8A56D35321E7C0450021D0EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A56D35121E7C0450021D0EF /* Main.storyboard */; };
 		8A56D35521E7C0480021D0EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A56D35421E7C0480021D0EF /* Assets.xcassets */; };
 		8A56D35821E7C0480021D0EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A56D35621E7C0480021D0EF /* LaunchScreen.storyboard */; };
-		8A56D36321E7C0480021D0EF /* RomanNumeralConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A56D36221E7C0480021D0EF /* RomanNumeralConverterTests.swift */; };
+		8A56D36E21E7C2F40021D0EF /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A56D36D21E7C2F40021D0EF /* Converter.swift */; };
+		8A56D37021E7C30E0021D0EF /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A56D36F21E7C30E0021D0EF /* ConverterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +35,9 @@
 		8A56D35721E7C0480021D0EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A56D35921E7C0480021D0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A56D35E21E7C0480021D0EF /* RomanNumeralConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RomanNumeralConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A56D36221E7C0480021D0EF /* RomanNumeralConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanNumeralConverterTests.swift; sourceTree = "<group>"; };
 		8A56D36421E7C0480021D0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A56D36D21E7C2F40021D0EF /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		8A56D36F21E7C30E0021D0EF /* ConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				8A56D34D21E7C0450021D0EF /* AppDelegate.swift */,
+				8A56D36D21E7C2F40021D0EF /* Converter.swift */,
 				8A56D34F21E7C0450021D0EF /* ViewController.swift */,
 				8A56D35121E7C0450021D0EF /* Main.storyboard */,
 				8A56D35421E7C0480021D0EF /* Assets.xcassets */,
@@ -90,7 +93,7 @@
 		8A56D36121E7C0480021D0EF /* RomanNumeralConverterTests */ = {
 			isa = PBXGroup;
 			children = (
-				8A56D36221E7C0480021D0EF /* RomanNumeralConverterTests.swift */,
+				8A56D36F21E7C30E0021D0EF /* ConverterTests.swift */,
 				8A56D36421E7C0480021D0EF /* Info.plist */,
 			);
 			path = RomanNumeralConverterTests;
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A56D35021E7C0450021D0EF /* ViewController.swift in Sources */,
+				8A56D36E21E7C2F40021D0EF /* Converter.swift in Sources */,
 				8A56D34E21E7C0450021D0EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A56D36321E7C0480021D0EF /* RomanNumeralConverterTests.swift in Sources */,
+				8A56D37021E7C30E0021D0EF /* ConverterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QU6C4PQH66;
 				INFOPLIST_FILE = RomanNumeralConverter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,6 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QU6C4PQH66;
 				INFOPLIST_FILE = RomanNumeralConverter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -396,6 +402,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QU6C4PQH66;
 				INFOPLIST_FILE = RomanNumeralConverterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -416,6 +423,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QU6C4PQH66;
 				INFOPLIST_FILE = RomanNumeralConverterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
